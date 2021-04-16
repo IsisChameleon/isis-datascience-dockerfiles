@@ -1,0 +1,1 @@
+docker run -it --rm --name python-container -v "$PWD":/usr/src/widget_app python:3 python my_script.py

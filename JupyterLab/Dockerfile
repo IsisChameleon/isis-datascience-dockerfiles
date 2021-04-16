@@ -21,6 +21,4 @@ RUN jupyter labextension install @jupyterlab/debugger
 
 WORKDIR $HOME/notebooks
 
-RUN git init
-
 WORKDIR $HOME
