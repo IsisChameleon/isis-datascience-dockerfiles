@@ -1,25 +1,23 @@
-version: "3"
-services:
+version: "3.3"
+services: # all services are automatically added to a default created network for all services in the compose file
   jupyterlab:
-    build:
-      context: ../
-      dockerfile: ./JupyterLab/Dockerfile 
-      args:
-    container_name: datascience
-    image: isischameleon/usyd-data-science:debugger
-    restart: unless-stopped
-    logging:
-      driver: json-file
-      options:
-        max-size: 50m
-    ports:
-      - "8890:8888"
+    image: 'isischameleon/usyd-data-science:debugger'
     volumes:
       - notebooks:/home/joyvan/notebooks
       - data:/home/jovyan/data
+    container_name: jupy
+    build:
+      context: ./
+      dockerfile: ./Dockerfile 
+    ports:
+      - "8890:8888"
+
     command: start.sh jupyter lab
     #deploy:
     #  resources:
     #    reservations:
     #      devices:
     #      - capabilities: [gpu]
+volumes:
+  data: 
+  notebooks:
