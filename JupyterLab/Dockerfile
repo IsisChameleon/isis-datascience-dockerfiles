@@ -11,13 +11,14 @@ RUN mkdir "/home/$NB_USER/data" && \
 ## xeus-python: Installing a kernel supporting Jupyter debugging protocol
 RUN conda install -c conda-forge --quiet --yes \
     'python-graphviz' \
+    'jupyterlab-git' \
     'nodejs' \
     'xeus-python' && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
 #Installing labextension for frontend debugging
-RUN jupyter labextension install @jupyterlab/debugger
+RUN jupyter labextension install @jupyterlab/debugger @jupyterlab/git
 
 WORKDIR $HOME/notebooks
 

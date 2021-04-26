@@ -32,5 +32,5 @@ RUN jupyter labextension install @jupyterlab/debugger
 
 WORKDIR $HOME/notebooks
 
-#  docker build --rm -t isischameleon/usyd-data-science:csharp .
+#  docker build -t isischameleon/usyd-data-science:csharp .
 #  docker run -d -p 8892:8888 --name csharpjupy -v data:/home/jovyan/data -v notebooks:/home/jovyan/notebooks usyd-data-science:csharp
