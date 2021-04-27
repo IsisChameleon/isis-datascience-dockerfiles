@@ -8,4 +8,4 @@ More details on how to use and run the container here:
 
 https://hub.docker.com/repository/docker/isischameleon/usyd-data-science
 
-docker build --rm -t isischameleon/usyd-data-science:debugger .
+docker build --t isischameleon/usyd-data-science:debugger .
