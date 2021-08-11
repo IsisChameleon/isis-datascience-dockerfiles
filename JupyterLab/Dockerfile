@@ -14,7 +14,6 @@ RUN mkdir "/home/$NB_USER/data" && \
 # Install Python 3 packages
 ## node-js: Installing nodejs for frontend debugging
 ## xeus-python: Installing a kernel supporting Jupyter debugging protocol
-<<<<<<< HEAD
 RUN conda install -c conda-forge --quiet --yes \
     'python-graphviz' \
     'jupyterlab-git' \
@@ -25,7 +24,6 @@ RUN conda install -c conda-forge --quiet --yes \
 
 #Installing labextension for frontend debugging
 RUN jupyter labextension install @jupyterlab/debugger @jupyterlab/git
-=======
 # RUN conda install -c conda-forge --quiet --yes \
 #     'jupyterlab-git'
 # RUN conda install -c conda-forge --quiet --yes \
@@ -43,7 +41,6 @@ RUN jupyter labextension install @jupyterlab/debugger @jupyterlab/git
 
 #Installing labextension for frontend debugging
 # RUN jupyter labextension install @jupyterlab/debugger @jupyterlab/jupyterlab-git
->>>>>>> 915f5fb (Old changes)
 
 
 WORKDIR $HOME/notebooks
