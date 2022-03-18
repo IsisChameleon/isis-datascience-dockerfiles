@@ -1,6 +1,7 @@
 #
-# docker run -d -p 8890:8888 --name tensy -v data:/home/jovyan/data -v notebooks:/home/jovyan/notebooks isischameleon/usyd-tensorflow:latest start.sh jupyterlab
+# docker run -d -p 8890:8888 --name tensy --network isa-network -v data:/home/jovyan/data -v notebooks:/home/jovyan/notebooks isischameleon/usyd-tensorflow:latest start.sh jupyterlab
 # docker build -t isischameleon/usyd-tensorflow:latest .
+# docker network create isa-network
 
 #FROM jupyter/datascience-notebook:latest
 FROM jupyter/tensorflow-notebook:latest

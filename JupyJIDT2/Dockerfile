@@ -1,5 +1,6 @@
 #
-# docker run -d -p 8896:8888 --shm-size=1G -e JUPYTER_ENABLE_LAB=yes --name tensyj2 -v data:/home/jovyan/data -v notebooks:/home/jovyan/notebooks isischameleon/usyd-pytorch:jidt2
+# docker network create isa-network
+# docker run -d -p 8896:8888 --network isa-network --shm-size=1G -e JUPYTER_ENABLE_LAB=yes --name tensyj2 -v data:/home/jovyan/data -v notebooks:/home/jovyan/notebooks isischameleon/usyd-pytorch:jidt2
 # docker build -t isischameleon/usyd-pytorch:jidt2 .
 
 #FROM jupyter/datascience-notebook:latest
