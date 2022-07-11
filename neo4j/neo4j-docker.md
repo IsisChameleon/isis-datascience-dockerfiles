@@ -46,3 +46,8 @@ cypher-shell -u neo4j -p isabelle (replace with correct user/password)
 
 ## Cypher doc
 https://neo4j.com/docs/cypher-manual/current/
+
+
+At work:
+
+docker run -d --name isabelle-neo4j -p 7474:7474 --network isa-network -p 7687:7687 -v c:/Users/IsabelleDeBacker/neo4j/data:/data  -v c:/Users/IsabelleDeBacker/neo4j/logs:/logs -v c:/Users/IsabelleDeBacker/neo4j/import:/var/lib/neo4j/import -v c:/Users/IsabelleDeBacker/neo4j/plugins:/plugins --env NEO4J_AUTH=neo4j/neo4j neo4j:latest
